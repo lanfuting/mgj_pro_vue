@@ -26,7 +26,7 @@
         </label>
         <!-- 登录后显示的信息-->
         <div v-if="online" style="font-size: 20px;line-height: 40px; color: #FF4466;">
-          hi，{{users.logname}}!<br /> 欢迎登陆
+          hi，{{users.logname}}{{supplier.slogname}}!<br /> 欢迎登陆
           <button @click="outlogon()" class="btn btn-link" style="width: 62px;height: 25px;font-size: 12px;text-align: center;">退出登录</button>
         </div>
       </div>
@@ -45,7 +45,9 @@
         keywordlist: [],
         listindex: -1,
         users: [],
+        supplier: [],
         online: false,
+        supp_online:false,
         buyshoplist: [{
             "byname": "消息",
             "bypt": "fa fa-commenting-o",
@@ -175,7 +177,18 @@
             po.users = result;
             po.online = true;
           }
-
+        }
+      });
+      // 登录后带着信息，在登录按键上变成商家信息
+      $.ajax("http://127.0.0.1:8082/backstage/supplieronline", {
+        xhrFields: {
+          withCredentials: true
+        },
+        success: function(result) {
+          if (result.slogname != undefined) {
+            po.supplier = result;
+            po.online = true;
+          }
         }
       });
     }

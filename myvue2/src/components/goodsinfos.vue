@@ -62,7 +62,6 @@
           }
         });
       }
-
     },
     mounted() {
       this.getgoodsinfo();

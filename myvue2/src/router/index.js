@@ -7,6 +7,9 @@ import register_post from '@/components/register_post.vue'
 import cart from '@/components/cart.vue'
 import orderinfo from '@/components/orderinfo.vue'
 import orderinfo_topay from '@/components/orderinfo_topay.vue'
+import supplier_register from '@/components/supplier_register.vue'
+import supplier_register_post from '@/components/supplier_register_post.vue'
+import supplier_putgoods from '@/components/supplier_putgoods.vue'
 
 
 Vue.use(Router)
@@ -27,6 +30,21 @@ export default new Router({
       path: '/register_post',
       name: 'register_post',
       component: register_post
+    },
+    {
+      path: '/supplier_register',
+      name: 'supplier_register',
+      component: supplier_register
+    },
+    {
+      path: '/supplier_register_post',
+      name: 'supplier_register_post',
+      component: supplier_register_post
+    },
+    {
+      path: '/supplier_putgoods',
+      name: 'supplier_putgoods',
+      component: supplier_putgoods
     },
     {
       path: '/cart',
