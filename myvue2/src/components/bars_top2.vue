@@ -56,7 +56,7 @@
           {
             "byname": "收藏",
             "bypt": "fa fa-star-o",
-            "byurl": ""
+            "byurl": "collect"
           },
           {
             "byname": "购物车",

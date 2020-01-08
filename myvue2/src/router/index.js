@@ -10,6 +10,8 @@ import orderinfo_topay from '@/components/orderinfo_topay.vue'
 import supplier_register from '@/components/supplier_register.vue'
 import supplier_register_post from '@/components/supplier_register_post.vue'
 import supplier_putgoods from '@/components/supplier_putgoods.vue'
+import merchant_delivery_note from '@/components/merchant_delivery_note.vue'
+import collect from '@/components/collect.vue'
 
 
 Vue.use(Router)
@@ -45,6 +47,16 @@ export default new Router({
       path: '/supplier_putgoods',
       name: 'supplier_putgoods',
       component: supplier_putgoods
+    },
+    {
+      path: '/merchant_delivery_note',
+      name: 'merchant_delivery_note',
+      component: merchant_delivery_note
+    },
+    {
+      path: '/collect',
+      name: 'collect',
+      component: collect
     },
     {
       path: '/cart',
